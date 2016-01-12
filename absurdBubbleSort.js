@@ -36,7 +36,3 @@ function innerBubbleLoop(arr, i, madeAnySwaps, outerBubbleSortLoop) {
     console.log("outerBubbleSortLoop(madeAnySwaps)");
   }
 }
-
-
-
-absurdBubbleSort([3,1,2], function(){});
