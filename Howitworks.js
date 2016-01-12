@@ -21,7 +21,6 @@ var promptMove = function() {
     rl.close();
   };
 
-
 };
 
 promptMove();
