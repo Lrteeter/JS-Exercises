@@ -5,7 +5,6 @@ var reader = readline.createInterface({
   output: process.stdout
 });
 
-// Write this first.
 function askIfGreaterThan(el1, el2, callback) {
   var qstring = "Is " + el1 + " greater than " + el2 + "? (y/n) : ";
   reader.question(qstring, function(answer){
@@ -17,8 +16,6 @@ function askIfGreaterThan(el1, el2, callback) {
   });
 }
 
-
-// Once you're done testing askIfGreaterThan with dummy arguments, write this.
 function innerBubbleLoop(arr, i, madeAnySwaps, outerBubbleSortLoop) {
   if (i < arr.length - 1) {
     askIfGreaterThan(arr[i], arr[i + 1], function(isGreaterThan) {
@@ -36,9 +33,6 @@ function innerBubbleLoop(arr, i, madeAnySwaps, outerBubbleSortLoop) {
   }
 }
 
-// Once you're done testing innerBubbleSortLoop, write outerBubbleSortLoop.
-// Once you're done testing outerBubbleSortLoop, write absurdBubbleSort.
-
 function absurdBubbleSort(arr, sortCompletionCallback) {
   function outerBubbleSortLoop(madeAnySwaps) {
     if (madeAnySwaps === true){
@@ -47,11 +41,4 @@ function absurdBubbleSort(arr, sortCompletionCallback) {
       sortCompletionCallback();
     }
   }
-
-  // Kick the first outer loop off, starting `madeAnySwaps` as true.
 }
-
-absurdBubbleSort([3, 2, 1], function (arr) {
-  console.log("Sorted array: " + JSON.stringify(arr));
-  reader.close();
-});
